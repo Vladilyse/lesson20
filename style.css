@@ -1,0 +1,158 @@
+.container div{
+    /* border: 1px solid black; */
+    padding: 10px;
+}
+/* body{
+    background-color: coral;
+} */
+.container{
+    color: white;
+    margin: auto;
+    width: 70%;
+    display: grid;
+    grid-template-areas: 
+                        "header header header"
+                        "sidebar content nav" 
+                        "footer footer footer";
+    grid-gap: 10px;
+    grid-template-columns: 300px 6fr 300px;
+}
+.header{
+    transition: all 1s;
+    display: flex;
+    justify-content: center;
+    grid-area: header;
+    height: 50px;
+    width: 1310px;
+    -webkit-box-shadow: -4px 5px 15px 4px #000000; 
+    box-shadow: -4px 5px 15px 4px #000000;
+    background: linear-gradient(75deg,rgb(20, 46, 190),rgb(19, 105, 204));
+}
+.header div{
+    margin-right: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    /* background-color: rgb(213, 236, 77); */
+    height: 20px;
+    width: 120px;
+    text-align: center;
+}
+.sidebar{
+    font-size: 20px;
+    transition: all 1s;
+    height: 70px;
+    grid-area: sidebar;
+    align-self: start;
+    -webkit-box-shadow: -4px 5px 15px 4px #000000; 
+    box-shadow: -4px 5px 15px 4px #000000;
+    background:linear-gradient(75deg,rgb(121, 9, 9),rgb(223, 124, 12))
+}
+.sidebar:hover{
+    height: 150px;
+}
+.content{
+    grid-template-columns: minmax(50px,100px);
+    font-size: 20px;
+    grid-area: content;
+    -webkit-box-shadow: -4px 5px 15px 4px #000000; 
+    box-shadow: -4px 5px 15px 4px #000000;
+    background: linear-gradient(75deg,rgb(27, 27, 196),rgb(19, 105, 204));
+}
+.nav{
+    transition: all 1s;
+    height: 70px;
+    grid-area: nav;
+    align-self: start;
+    -webkit-box-shadow: -4px 5px 15px 4px #000000; 
+    box-shadow: -4px 5px 15px 4px #000000;
+    background:linear-gradient(75deg,rgb(121, 9, 9),rgb(223, 124, 12))
+}
+.nav:hover{
+    height: 150px;
+}
+.footer{
+    transition: all 1s;
+    text-align: center;
+    grid-area: footer;
+    -webkit-box-shadow: -4px 5px 15px 4px #000000; 
+    box-shadow: -4px 5px 15px 4px #000000;
+    background: linear-gradient(75deg,rgb(27, 27, 196),rgb(19, 105, 204));
+}
+.footer img{
+    margin-right: 30px;
+}
+.footer img:hover{
+    width: 40px;
+    height: 40px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: rgb(108, 108, 240);
+}
+.click{
+    position: relative;
+    top: 30px;
+    left: 40px;
+}
+/* img{
+    width: 40px;
+    height: 40px;
+} */
+input{
+    position: fixed;
+    top: -20px;
+}
+input::before{
+    content: "";
+    position: fixed;
+    background: url(./img/Без\ названия.jpg);
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+    right: 28%;
+    top: 120px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+input:checked + .container .header{
+    background: url(./img/Без\ названия.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70px;
+    align-items: center;
+}
+input:checked + .container .header a:hover{
+    color: black;
+}
+input:checked + .container .nav{
+    background: url(./img/цвет.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+input:checked + .container .sidebar{
+    background: url(./img/цвет.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+input:checked + .container .content{
+    background: url(./img/фон1.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+}
+input:checked + .container .nav .click{
+    top: 10px;
+}
+input:checked + .container .footer{
+    height: 90px;
+    background: url(./img/цвет\ 3.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+input:checked + .container .footer img{
+    margin-top: 20px;
+}
